@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='xaosppru'>
+  <inherits name='com.google.gwt.core.Core'/>
+  <inherits name='com.google.gwt.user.theme.standard.Standard'/>
+  <source path='client'/>
+  <entry-point class='ru.pp.xaos.client.Root'/>
+</module>

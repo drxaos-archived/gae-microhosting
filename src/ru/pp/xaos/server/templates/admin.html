@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<title>Admin</title>
+	</head>
+	<style type="text/css">
+		table {
+			border-collapse: collapse;
+		}
+		td {
+			border: black solid 1px;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 3px;
+			padding-bottom: 3px;
+		}
+		th {
+			border: black solid 1px;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			background-color: #ddd;
+		}
+	</style>
+<body>
+	<p>
+		<a href="https://mail.google.com/a/v-pp.ru/">[gmail for domains]</a>
+		<a href="http://appengine.google.com/">[appengine]</a>
+		<a href="/">[root]</a>
+	</p>
+	<p>
+		Rules:
+		<table>
+			<thead><tr><th>Domain</th><th>Emails</th></tr></thead>
+			<tbody>%TABLE%</tbody>
+		</table>
+	</p>
+	<p>
+		Modify:<br/>
+		<form name="files" action="%URL%?update=1" method="post">
+			<textarea name="roles" rows="10" cols="50">%RULES%</textarea><br/>
+			<input type="submit" name="Submit" value="Submit">
+		</form>
+	</p>
+</body>
+</html>

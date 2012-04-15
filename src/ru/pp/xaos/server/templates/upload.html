@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<title>Upload</title>
+	</head>
+<body>
+	<p>
+		<a href="/">[root]</a>
+	</p>
+	<p>
+		Upload site:<br/>
+		<form name="files" action="%URL%?upload=1" method="post" enctype="multipart/form-data">
+			<input type="file" name="site">
+			<input type="submit" name="Submit" value="Upload">
+		</form>
+	</p>
+	<p>
+		Download site:<br/>
+		<form name="files" action="%URL%?download=1" method="post" enctype="multipart/form-data">
+			<input type="submit" name="Submit" value="Download">
+		</form>
+	</p>
+</body>
+</html>

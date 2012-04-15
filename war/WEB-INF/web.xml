@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+	<servlet>
+		<servlet-name>admin</servlet-name>
+		<servlet-class>ru.pp.xaos.server.AdminServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>upload</servlet-name>
+		<servlet-class>ru.pp.xaos.server.UploadServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>file</servlet-name>
+		<servlet-class>ru.pp.xaos.server.FileServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>info</servlet-name>
+		<servlet-class>ru.pp.xaos.server.InfoServlet</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>admin</servlet-name>
+		<url-pattern>/-/admin</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>upload</servlet-name>
+		<url-pattern>/-/upload</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>info</servlet-name>
+		<url-pattern>/-/info</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>file</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+
+
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>upload</web-resource-name>
+			<url-pattern>/-/upload</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>info</web-resource-name>
+			<url-pattern>/-/info</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>admin</web-resource-name>
+			<url-pattern>/-/admin</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+</web-app>
